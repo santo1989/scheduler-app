@@ -7,3 +7,4 @@
 ## Previous state (main @ bb6533c Harden and restructure scheduler app for production)
 - No system_info.md
 - Pre-work backup: `D:\NTG_APP\_backups\pre-work-2026-10-24\scheduler-app.zip` (no DB dump taken)
+- DB auto-backup: `tools/db_backup.php` added (CLI, MySQL, tested 2026-10-24; not scheduled)

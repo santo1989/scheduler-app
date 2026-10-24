@@ -16,3 +16,7 @@ Auto-generated overview (2026-10-24); refine as the app is worked on.
 ## Open items (need owner approval)
 - Database backup, licence check and security headers are NOT added here: not a standard Laravel app, or its database settings are not available in this folder; needs a per-app decision.
 - No dependency/vulnerability audit done for this app.
+
+## DB auto-backup (added 2026-10-24)
+- `php tools/db_backup.php [--keep=14]` (CLI only; `tools/.htaccess` denies web access). Uses the app's own DB settings, writes `mysqldump` files to `D:\NTG_APP\_db_auto_backups\<db>\` (outside the web root; override with `DB_BACKUP_DIR`), keeps the newest 14. Set `MYSQLDUMP_PATH` if `mysqldump` is not on PATH.
+- Schedule it daily with Windows Task Scheduler (action: `php.exe D:\NTG_APP\www\scheduler-app	ools\db_backup.php`). NOT scheduled yet; needs owner approval.
